@@ -1,6 +1,6 @@
 import unittest
 
-from mail import EmailExtractor
+from lab1.mail import EmailExtractor
 
 class EmailExtractorTestCase(unittest.TestCase):
     def setUp(self) -> None:
@@ -37,7 +37,6 @@ class EmailExtractorTestCase(unittest.TestCase):
 
     def test_is_male(self):
         for x in self.data:
-            with self.subTest(): to
             with self.subTest():
                 # given
                 email = x[0]

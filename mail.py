@@ -3,8 +3,8 @@ import re
 
 class EmailExtractor:
 
-    def __init__(self, emailD):
-        self.email = emailD
+    def __init__(self, email):
+        self.email = email
         self.regex = r"(?P<name>[a-z]+)\.(?P<surname>[a-z]+)[0-9]*@(?P<is_student>(student\.)?)(wat\.edu\.pl)"
 
     def get_name(self):
@@ -30,7 +30,7 @@ class EmailExtractor:
     def is_male(self) -> bool:
         name = self.get_name()
         x = name[-1]
-        if x == 'a':
+        if x == "a":
             return False
         else:
             return True

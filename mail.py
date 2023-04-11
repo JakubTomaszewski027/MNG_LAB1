@@ -16,7 +16,7 @@ class EmailExtractor:
     def get_surname(self):
         x = re.compile(self.regex)
         y = x.findall(self.email)
-        surname = y[0][2]
+        surname = y[0][1]
         return surname
 
     def is_student(self) -> bool:

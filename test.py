@@ -12,7 +12,6 @@ class EmailExtractorTestCase(unittest.TestCase):
             ["anna.nowak@student.wat.edu.pl", True, False, "anna", "nowak"],
             ["adrianna.abacka01@student.wat.edu.pl", True, False, "adrianna", "abacka"],
             ["katarzyna.babacka@wat.edu.pl", False, False, "katarzyna", "babacka"],
-
             ["marek.jarecki@student.wat.edu.pl", True, True, "marek", "jarecki"],
             ["weronika.jankowska@wat.edu.pl", False, False, "weronika", "jankowska"],
             ["aleksandra.buczkowska@wat.edu.pl", False, True, "aleksandra", "buczkowska"],
@@ -46,6 +45,14 @@ class EmailExtractorTestCase(unittest.TestCase):
                 extractor = EmailExtractor(email)
                 # expect
                 self.assertEqual(name, extractor.get_name())
+
+    def test_get_name(self):
+        for x in self.data:
+            with self.subTest():
+                email = x[0]
+                name = x[4]
+                extractor = EmailExtractor(email)
+                self.assertEqual(name, extractor.get_surname())
 
     def test_get_surname(self):
         for x in self.data:

@@ -2,7 +2,6 @@ import unittest
 
 from mail import EmailExtractor
 
-
 class EmailExtractorTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.data = [

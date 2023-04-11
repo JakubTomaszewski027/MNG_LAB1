@@ -1,27 +1,28 @@
 import unittest
 
-from lab1.mail import EmailExtractor
+from mail import EmailExtractor
+
 
 class EmailExtractorTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.data = [
             # email, is_student, is_male, name, surname
-            ["norbert.waszkowiak@wat.edu.pl", False, True, "Norbert", "Waszkowiak"],
-            ["jan.kowalski@student.wat.edu.pl", True, True, "Jan", "Kowalski"],
-            ["anna.nowak@student.wat.edu.pl", True, False, "Anna", "Nowak"],
-            ["adrianna.abacka01@student.wat.edu.pl", True, False, "Adrianna", "Abacka"],
-            ["katarzyna.babacka@wat.edu.pl", False, False, "Katarzyna", "Babacka"],
+            ["norbert.waszkowiak@wat.edu.pl", False, True, "norbert", "waszkowiak"],
+            ["jan.kowalski@student.wat.edu.pl", True, True, "jan", "kowalski"],
+            ["anna.nowak@student.wat.edu.pl", True, False, "anna", "nowak"],
+            ["adrianna.abacka01@student.wat.edu.pl", True, False, "adrianna", "abacka"],
+            ["katarzyna.babacka@wat.edu.pl", False, False, "katarzyna", "babacka"],
 
-            ["marek.jarecki@student.wat.edu.pl", True, True, "Marek", "Jarecki"],
-            ["weronika.jankowska@wat.edu.pl", False, False, "Weronika", "Jankowska"],
-            ["aleksandra.buczkowska@wat.edu.pl", False, True, "Aleksandra", "Buczkowska"],
-            ["alicja.kaminska01@student.wat.edu.pl", True, False, "Alicja", "Kaminska"],
-            ["anastazja.laskowska@wat.edu.pl", False, False, "Anastazja", "Laskowska"],
-            ["baltazar.gabka@wat.edu.pl", False, True, "Baltazar", "Gabka"],
-            ["klaudia.rudzka@student.wat.edu.pl", True, False, "Klaudia", "Rudzka"],
-            ["dominik.mlynarski02@student.wat.edu.pl", True, True, "Dominik", "Mlynarski"],
-            ["konstanty.malinowski@wat.edu.pl", False, True, "Konstanty", "Malinowski"],
-            ["dawid.jasper@student.wat.edu.pl", True, True, "Dawid", "Jasper"],
+            ["marek.jarecki@student.wat.edu.pl", True, True, "marek", "jarecki"],
+            ["weronika.jankowska@wat.edu.pl", False, False, "weronika", "jankowska"],
+            ["aleksandra.buczkowska@wat.edu.pl", False, True, "aleksandra", "buczkowska"],
+            ["alicja.kaminska01@student.wat.edu.pl", True, False, "alicja", "kaminska"],
+            ["anastazja.laskowska@wat.edu.pl", False, False, "anastazja", "laskowska"],
+            ["baltazar.gabka@wat.edu.pl", False, True, "baltazar", "gabka"],
+            ["klaudia.rudzka@student.wat.edu.pl", True, False, "klaudia", "rudzka"],
+            ["dominik.mlynarski02@student.wat.edu.pl", True, True, "dominik", "mlynarski"],
+            ["konstanty.malinowski@wat.edu.pl", False, True, "konstanty", "malinowski"],
+            ["dawid.jasper@student.wat.edu.pl", True, True, "dawid", "jasper"],
         ]
 
     def test_is_student(self):

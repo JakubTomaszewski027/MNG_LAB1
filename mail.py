@@ -1,6 +1,5 @@
 import re
 
-
 class EmailExtractor:
 
     def __init__(self, email):

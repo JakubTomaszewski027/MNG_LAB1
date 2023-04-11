@@ -1,22 +1,23 @@
 import re
 
+
 class EmailExtractor:
 
     def __init__(self, emailD):
         self.email = emailD
         self.regex = r"(?P<name>[a-z]+)\.(?P<surname>[a-z]+)[0-9]*@(?P<is_student>(student\.)?)(wat\.edu\.pl)"
 
-    def get_name(self) -> str:
+    def get_name(self):
         x = re.compile(self.regex)
         y = x.findall(self.email)
         name = y[0][1]
-        return name.capitalize()
+        return name
 
-    def get_surname(self) -> str:
+    def get_surname(self):
         x = re.compile(self.regex)
         y = x.findall(self.email)
         surname = y[0][1]
-        return surname.capitalize()
+        return surname
 
     def is_student(self) -> bool:
         x = re.compile(self.regex)
@@ -33,9 +34,3 @@ class EmailExtractor:
             return False
         else:
             return True
-
-
-
-
-
-

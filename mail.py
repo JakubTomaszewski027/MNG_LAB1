@@ -16,13 +16,13 @@ class EmailExtractor:
     def get_surname(self):
         x = re.compile(self.regex)
         y = x.findall(self.email)
-        surname = y[0][1]
+        surname = y[0][2]
         return surname
 
     def is_student(self) -> bool:
         x = re.compile(self.regex)
         y = x.findall(self.email)
-        if y[0][1] == "":
+        if y[0][3] == "":
             return False
         else:
             return True
